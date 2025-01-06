@@ -10,3 +10,8 @@ export interface Country {
 	id: number;
 	continent: Continent;
 }
+export interface NewCountryInput {
+	name: string;
+	code: string;
+	emoji: string;
+}

@@ -6,7 +6,6 @@ import type { Country } from "@/types";
 export default function DisplayCountries() {
 	const { loading, error, data } = useQuery(GET_ALL_COUNTRIES_QUERY);
 	const countries: Country[] = data?.countries || [];
-	console.log(countries);
 
 	if (loading) return <p>Loading...</p>;
 	if (error) return <p>Error: {error.message}</p>;
