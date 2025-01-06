@@ -8,6 +8,7 @@ import {
 	ApolloProvider,
 	gql,
 } from "@apollo/client";
+import Layout from "@/components/Layout";
 
 const client = new ApolloClient({
 	uri: "http://localhost:4000/",
@@ -17,7 +18,9 @@ const client = new ApolloClient({
 function App({ Component, pageProps }: AppProps) {
 	return (
 		<ApolloProvider client={client}>
-			<Component {...pageProps} />
+			<Layout>
+				<Component {...pageProps} />
+			</Layout>
 		</ApolloProvider>
 	);
 }
